@@ -31,21 +31,22 @@ import restaurantLogo from '../media/5087623.png'
    for (let i = 1; i <= 3; i++) {
       
       const li = document.createElement('li');
-      const liChild = document.createElement('div');
    
       if (i === 1) {
-         liChild.textContent = 'Home';
-         liChild.classList.add('homeChild');
+         li.textContent = 'Home';
+         li.classList.add('tab')
+         li.setAttribute('id', 'home');;
       } else if (i === 2) {
-         liChild.textContent = 'Menu';
-         liChild.classList.add('menuChild');
+         li.textContent = 'Menu';
+         li.classList.add('tab');
+         li.setAttribute('id', 'menu');
       } else if (i === 3) {
-         liChild.textContent = 'Contact';
-         liChild.classList.add('contactChild');
+         li.textContent = 'Contact';
+         li.classList.add('tab');
+         li.setAttribute('id', 'contact');
       }
    
       tabs.appendChild(li);
-      li.appendChild(a);
    }
 }
 
