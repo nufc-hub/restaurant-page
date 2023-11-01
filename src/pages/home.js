@@ -7,24 +7,24 @@ function addHomeContent() {
    // Main Div parent container - child of contentDiv
 
    const mainDiv = document.createElement('div');
-   mainDiv.classList.add('main');
+   mainDiv.setAttribute('id', 'main-home');
    contentDiv.appendChild(mainDiv);
 
    // mainDiv children - child of mainDiv
 
    const mainImg = document.createElement('img');
-   mainImg.classList.add('main-img');
+   mainImg.setAttribute('id', 'main-home-img');
    mainImg.src = mainImage;
    mainImg.alt = 'An uncooked green cabbage head';
    const sloganContainer = document.createElement('div');
-   sloganContainer.classList.add('slogan-container');
+   sloganContainer.setAttribute('id', 'slogan-container-home');
    mainDiv.appendChild(mainImg);
    mainDiv.appendChild(sloganContainer);
 
    // Slogan - child of sloganContainer
 
    const sloganDiv = document.createElement('div');
-   sloganDiv.classList.add('slogan');
+   sloganDiv.setAttribute('id', 'slogan-home');
    
    const textNodeOne = document.createTextNode('100% CABBAGE,');
    const textNodeTwo = document.createTextNode('...');
