@@ -31,17 +31,17 @@ import restaurantLogo from '../media/5087623.png'
    for (let i = 1; i <= 3; i++) {
       
       const li = document.createElement('li');
-      const a = document.createElement('a');
+      const liChild = document.createElement('div');
    
       if (i === 1) {
-         a.textContent = 'Home';
-         a.href = ''
+         liChild.textContent = 'Home';
+         liChild.classList.add('homeChild');
       } else if (i === 2) {
-         a.textContent = 'Menu';
-         a.href = ''
+         liChild.textContent = 'Menu';
+         liChild.classList.add('menuChild');
       } else if (i === 3) {
-         a.textContent = 'Contact';
-         a.href = ''
+         liChild.textContent = 'Contact';
+         liChild.classList.add('contactChild');
       }
    
       tabs.appendChild(li);
