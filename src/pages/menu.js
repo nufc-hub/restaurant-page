@@ -86,21 +86,6 @@ function addMenuContent() {
   itemOne.appendChild(imgOneText); 
   itemTwo.appendChild(imgTwoText);
   itemThree.appendChild(imgThreeText);
-
-
-    
-    
-    
-    
-   
-    
-
-
-    
-
-
-    
- 
 }
 
   export default addMenuContent;
