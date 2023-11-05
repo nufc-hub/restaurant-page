@@ -3,13 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 80px 20px 40px 20px;
 }
 
 #main-home-img {
-    margin: 50px 0px;
     max-width: 600px;
-    min-width: 100px;
-    max-height: auto;
+    min-width: 100px;  
 }
 
 #slogan-home {
@@ -36,7 +35,7 @@ span {
 
     #main-home-img {
         margin-bottom: 10px;
-        max-width: 50%;
+        max-width: 100%;
     }
 
     #slogan-home {
