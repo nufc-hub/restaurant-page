@@ -3,7 +3,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 80px 20px 40px 20px;
+    flex: 1;
+    padding: 80px 20px 40px 20px;
+    background-color: var(--red-100);
 }
 
 #main-home-img {
@@ -31,7 +33,7 @@ span {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 60px;
+        padding-top: 60px;
     }
 
     #main-home-img {
