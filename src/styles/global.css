@@ -1,0 +1,19 @@
+:root {
+    --rose-300: #fda4af;
+    --rose-700: #be123c;
+    --dark-charcoal: #333;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--rose-300);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
