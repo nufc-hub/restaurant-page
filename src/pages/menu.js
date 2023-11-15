@@ -1,7 +1,3 @@
-/*blended cabbage
-grated cabbage
-special - purple cabbage*/
-
 import firstImage from '../media/cabbage-juice.png';
 import secondImage from '../media/Sauerkraut-min.png';
 import thirdImage from '../media/fresh-purple-cabbage.png';
@@ -10,10 +6,10 @@ function addMenuContent() {
 
   const contentDiv = document.querySelector('.content');
 
-  // Main Div parent container - child of contentDiv
+  // Main Div parent container - child of contentDiv.
 
   const mainDiv = document.createElement('div');
-  mainDiv.setAttribute('id', 'main-menu');
+  mainDiv.id = 'main-menu';
   contentDiv.appendChild(mainDiv);
 
   // mainDiv children - child of mainDiv
@@ -22,9 +18,9 @@ function addMenuContent() {
   const itemTwo = document.createElement('div');
   const itemThree = document.createElement('div');
 
-  itemOne.setAttribute('id', 'item-one-menu');
-  itemTwo.setAttribute('id', 'item-two-menu');
-  itemThree.setAttribute('id', 'item-three-menu');
+  itemOne.id = 'item-one-menu';
+  itemTwo.id = 'item-two-menu';
+  itemThree.id = 'item-three-menu';
 
   mainDiv.appendChild(itemOne);
   mainDiv.appendChild(itemTwo);
@@ -36,9 +32,9 @@ function addMenuContent() {
   const imgTwo = document.createElement('img');
   const imgThree = document.createElement('img');
 
-  imgOne.setAttribute('id', 'img-one-menu');
-  imgTwo.setAttribute('id', 'img-two-menu');
-  imgThree.setAttribute('id', 'img-three-menu');
+  imgOne.id = 'img-one-menu';
+  imgTwo.id = 'img-two-menu';
+  imgThree.id = 'img-three-menu';
 
   imgOne.src = firstImage;
   imgTwo.src = secondImage;
@@ -58,9 +54,9 @@ function addMenuContent() {
   const imgTwoText = document.createElement('div');
   const imgThreeText = document.createElement('div');
 
-  imgOneText.setAttribute('id', 'txt-one-menu');
-  imgTwoText.setAttribute('id', 'txt-two-menu');
-  imgThreeText.setAttribute('id', 'txt-three-menu');
+  imgOneText.id = 'txt-one-menu';
+  imgTwoText.id = 'txt-two-menu';
+  imgThreeText.id = 'txt-three-menu';
   
   const textNodeOne = document.createTextNode('Blended Cabbage');
   const textNodeTwo = document.createTextNode('Sauerkraut');

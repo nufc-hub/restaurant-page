@@ -1,16 +1,26 @@
+import mapImage from '../media/google-placeholder.png';
+
 function addContactContent() {
 
     const contentDiv = document.querySelector('.content');
 
-    // Main Div parent container - child of contentDiv
+    // Main Div parent container - child of contentDiv.
 
     const mainDiv = document.createElement('div');
 
-    mainDiv.setAttribute('id', 'main-contact');
+    mainDiv.id = 'main-contact';
 
     contentDiv.appendChild(mainDiv);
 
-    // Form - child of mainDiv
+    // Container for form and picture(?) - child of mainDiv.
+
+    const formImgContainer = document.createElement('section');
+
+    formImgContainer.id = 'form-img-container';
+
+    mainDiv.appendChild(formImgContainer);
+
+    // Form - child of formImgContainer.
 
     const contactForm = document.createElement('form');
 
@@ -18,24 +28,24 @@ function addContactContent() {
 
     contactForm.method = 'post';
 
-    contactForm.setAttribute('id', 'form-contact');
+    contactForm.id = 'form-contact';
 
-    mainDiv.appendChild(contactForm);
+    formImgContainer.appendChild(contactForm);
 
     // Header and input container - children of contactForm.
 
     const formHeader = document.createElement('h2');
     const bookingDetails = document.createElement('div'); // Input elements container.
 
-    formHeader.setAttribute('id', 'form-header');
-    bookingDetails.setAttribute('id', 'booking-details');
+    formHeader.id = 'form-header';
+    bookingDetails.id = 'booking-details';
 
-    formHeader.textContent = 'Make a reservation'
+    formHeader.textContent = 'Make a reservation';
 
     contactForm.appendChild(formHeader);
     contactForm.appendChild(bookingDetails); 
 
-    // Input containers, email input & button
+    // Input containers, email input & button.
 
     const dateContainer = document.createElement('div');
     const timeContainer = document.createElement('div');
@@ -43,19 +53,19 @@ function addContactContent() {
     const dinerEmail = document.createElement('input');
     const reservationButton = document.createElement('button');
 
-    dateContainer.setAttribute('id', 'date-container');
-    timeContainer.setAttribute('id', 'time-container');
-    guestsContainer.setAttribute('id', 'guest-container');
-    dinerEmail.setAttribute('id', 'diner-email');
-    reservationButton.setAttribute('id', 'reservation-button');
+    dateContainer.id = 'date-container';
+    timeContainer.id = 'time-container';
+    guestsContainer.id = 'guest-container';
+    dinerEmail.id = 'diner-email';
+    reservationButton.id = 'reservation-button';
 
     dinerEmail.type = 'email';
-
-    dinerEmail.id = 'diner_email';
 
     dinerEmail.name = 'diner_email';
 
     dinerEmail.placeholder = 'Enter your email';
+
+    reservationButton.textContent = 'Confirm availability';
 
     bookingDetails.appendChild(dateContainer);
     bookingDetails.appendChild(timeContainer);
@@ -63,7 +73,7 @@ function addContactContent() {
     bookingDetails.appendChild(dinerEmail);
     bookingDetails.appendChild(reservationButton);
 
-    // Date, time & number of guests input
+    // Date, time & number of guests input.
 
     const labelBookingDate = document.createElement('label');
     const labelBookingTime = document.createElement('label');
@@ -71,43 +81,111 @@ function addContactContent() {
     const inputBookingDate = document.createElement('input');
     const inputBookingTime = document.createElement('input');
     const inputNumberOfGuests = document.createElement('input');
-    const dropDownSVG = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
-    labelBookingDate.setAttribute('for', 'booking_date');
-    labelBookingDate.setAttribute('id', 'label-booking-date');
-    labelBookingTime.setAttribute('for', 'booking_time');
-    labelBookingTime.setAttribute('id', 'label-booking-time');
-    labelNumberOfGuests.setAttribute('for', 'guests');
-    labelNumberOfGuests.setAttribute('id', 'label-guests');
-    inputBookingDate.setAttribute('id', 'input-booking-date');
-    inputBookingTime.setAttribute('id', 'input-booking-time');
-    inputNumberOfGuests.setAttribute('id', 'input-guests');
+    labelBookingDate.htmlFor = 'input-booking-date';
+    labelBookingDate.id = 'label-booking-date';
+    labelBookingTime.htmlFor = 'input-booking-time';
+    labelBookingTime.id = 'label-booking-time';
+    labelNumberOfGuests.htmlFor = 'input-guests';
+    labelNumberOfGuests.id = 'label-guests';
+    inputBookingDate.id = 'input-booking-date';
+    inputBookingTime.id = 'input-booking-time';
+    inputNumberOfGuests.id = 'input-guests';
 
-    labelBookingDate.textContent = 'Date';
-    labelBookingTime.textContent = 'Time';
-    labelNumberOfGuests.textContent = 'Guests';
 
     inputBookingDate.type = 'date';
     inputBookingTime.type = 'time';
     inputNumberOfGuests.type = 'number';
 
-    inputBookingDate.id = 'booking_date';
-    inputBookingTime.id = 'booking_time';
-    inputNumberOfGuests.id = 'guests';
-
     inputBookingDate.name = 'booking_date';
     inputBookingTime.name = 'booking_time';
     inputNumberOfGuests.name = 'no_of_guests';
 
+    inputBookingDate.placeholder = 'Add date';
 
-    // The 'use' element is utilized to reference local SVG file.
-    const useDropDownSVG = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-    useDropDownSVG.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '../src/media/chevron-down.svg');
+    labelBookingDate.textContent = 'Date';
+    labelBookingTime.textContent = 'Time';
+    labelNumberOfGuests.textContent = 'Guests';
 
-    dropDownSVG.appendChild(useDropDownSVG);
-    labelBookingDate.appendChild(dropDownSVG);
-    labelBookingTime.appendChild(dropDownSVG);
-    labelNumberOfGuests.appendChild(dropDownSVG);
+    dateContainer.appendChild(labelBookingDate);
+    dateContainer.appendChild(inputBookingDate);
+    timeContainer.appendChild(labelBookingTime);
+    timeContainer.appendChild(inputBookingTime);
+    guestsContainer.appendChild(labelNumberOfGuests);
+    guestsContainer.appendChild(inputNumberOfGuests);
+
+    // Image - child of formImgContainer.
+
+    const mapImg = document.createElement('img');
+
+    mapImg.id = 'map-img';
+    mapImg.alt = 'Map of example restaurant location.';
+    mapImg.src = mapImage;
+
+    formImgContainer.appendChild(mapImg);
+
+    // Container for all contact details - child of mainDiv.
+
+    const contactDetails = document.createElement('section');
+
+    contactDetails.id = 'contact-details';
+
+    mainDiv.appendChild(contactDetails);
+
+    // Containers for each type of contact - child of contactDetails.
+
+    const restaurantLocation = document.createElement('div');
+    const restaurantHours = document.createElement('div');
+    const restaurantContact = document.createElement('div');
+    
+    // Content for each type of contact - child of containers.
+    
+    const headerLocation = document.createElement('h2');
+    const headerHours = document.createElement('h2');
+    const headerContact = document.createElement('h2');
+    const addressOne = document.createElement('p');
+    const addressTwo = document.createElement('p');
+    const hoursOne = document.createElement('p');
+    const hoursTwo = document.createElement('p');
+    const restaurantPhoneNumber = document.createElement('p');
+    const RestaurantEmail = document.createElement('p');
+
+    restaurantLocation.id = 'restaurant-location';
+    restaurantHours.id = 'restaurant-hours';
+    restaurantContact.id = 'restaurant-contact';
+    headerLocation.id = 'header-location';
+    headerHours.id = 'header-hours';
+    headerContact.id = 'header-contact';
+    addressOne.id = 'address-one';
+    addressTwo.id = 'address-two';
+    hoursOne.id = 'hours-one';
+    hoursTwo.id = 'hours-two';
+    restaurantPhoneNumber.id = 'restaurant-phone-number';
+    RestaurantEmail.id = 'restaurant-email';
+
+    headerLocation.textContent = 'Location';
+    headerHours.textContent = 'Hours';
+    headerContact.textContent = 'Contact';
+    addressOne.textContent = 'Cabbage Farm';
+    addressTwo.textContent = 'Cabbage Cottage';
+    hoursOne.textContent = 'Open - Summer';
+    hoursTwo.textContent = 'Closed - Winter';
+    restaurantPhoneNumber.textContent = 'Phone - 01010101';
+    RestaurantEmail.textContent = 'Email - cabbage@head.com';
+
+    contactDetails.appendChild(restaurantLocation);
+    contactDetails.appendChild(restaurantHours);
+    contactDetails.appendChild(restaurantContact);
+    restaurantLocation.appendChild(headerLocation);
+    restaurantLocation.appendChild(addressOne);
+    restaurantLocation.appendChild(addressTwo);
+    restaurantHours.appendChild(headerHours);
+    restaurantHours.appendChild(hoursOne);
+    restaurantHours.appendChild(hoursTwo);
+    restaurantContact.appendChild(headerContact);
+    restaurantContact.appendChild(restaurantPhoneNumber);
+    restaurantContact.appendChild(RestaurantEmail);
+
 }
 
 export default addContactContent;
