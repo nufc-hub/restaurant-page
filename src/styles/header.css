@@ -1,7 +1,9 @@
-.header-nav-container {
+#header-nav-container {
     display: flex;
     justify-content: space-between;
+    padding-left: 10px;
     border-bottom: 1px solid black;
+    background-color: var(--red-200);
 }
 
 nav {
@@ -21,7 +23,7 @@ header {
 
 header > h3 {
     box-sizing: border-box;
-    font-family: 'Anton', sans-serif;
+    font-family: var(--logo-font);
     font-size: 2rem;
     white-space: nowrap;
     margin: 0;
@@ -35,7 +37,7 @@ header > img {
 }
 
 ul {
-    font-family: 'Gabarito', sans-serif;
+    font-family: var(--page-font);
     display: flex;
     margin: 0;
     padding: 0;
@@ -57,10 +59,11 @@ li:hover {
 
 @media (max-width: 768px) {
 
-    .header-nav-container {
+    #header-nav-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-left: 0px;
     }
     
     nav {

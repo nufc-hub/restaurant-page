@@ -1,0 +1,154 @@
+#main-contact {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 150px;
+    background-color: var(--red-50);
+}
+
+#form-img-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    gap: 20px;
+}
+
+#form-contact {
+    font-family: var(--page-font);
+    color: var(--dark-charcoal);
+    display: inherit;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#booking-details {
+    display: grid;
+    grid-template: 2fr 1fr 1fr/ repeat(3, 1fr);
+    grid-template-areas: 'date-container time-container guest-container'
+                            'diner-email diner-email diner-email'
+                            'reservation-button reservation-button .';
+    width: inherit;
+    height: inherit;
+    gap: 20px;
+}
+
+#date-container,
+#time-container,
+#guest-container {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+
+#date-container {
+    grid-area: date-container;
+}
+
+#time-container {
+    grid-area: time-container;
+}
+
+#guest-container {
+    grid-area: guest-container;
+}
+
+#label-booking-date,
+#label-booking-time,
+#label-guests {
+    margin-bottom: 15px;
+}
+
+#input-booking-date,
+#input-booking-time,
+#input-guests,
+#diner-email {
+    height: 35px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid black;
+    color: var(--dark-charcoal);
+    background-color: var(--red-100);
+    transition: transform 0.3s ease-out;
+}
+
+#input-booking-date:focus,
+#input-booking-time:focus,
+#input-guests:focus,
+#diner-email:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+#diner-email {
+    grid-area: diner-email;
+}
+
+#reservation-button {
+    grid-area: reservation-button;
+    height: 50px;
+    width: 150px;
+    border: 2px solid var(--dark-charcoal);
+    border-radius: 3px;
+    color: var(--dark-charcoal);
+}
+
+#reservation-button:hover {
+    background: var(--stone-200);
+}
+
+#map-img {
+    justify-self: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    height:auto;
+    width: 100%;
+}
+
+#contact-details {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    font-family: var(--page-font);
+    color: var(--dark-charcoal);
+    background-color: var(--rose-100);
+}
+
+#restaurant-location,
+#restaurant-hours,
+#restaurant-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    #main-contact {
+        gap: 20px;
+    }
+
+    #form-img-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #booking-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #label-booking-date,
+    #label-booking-time,
+    #label-guests {
+        font-family: var(--page-font);
+        margin-bottom: 2px;
+    }
+
+    #contact-details {
+        flex-direction: column;
+    }
+}

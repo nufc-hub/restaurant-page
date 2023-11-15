@@ -1,16 +1,20 @@
 :root {
-    --red-100: #fee2e2;
-    --rose-300: #fda4af;
+    --red-50: #fef2f2;
+    --red-200: #fecaca;
+    --rose-100: #ffe4e6;
     --rose-700: #be123c;
+    --stone-200: #e7e5e4;
     --dark-charcoal: #333;
+
+    --logo-font: 'Anton', sans-serif;
+    --page-font: 'Gabarito', sans-serif;
 }
 
 body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background-color: var(--rose-300);
+    height: 100vh;;
 }
 
 .content {

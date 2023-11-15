@@ -5,7 +5,7 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 100px 20px 100px 20px;
     gap: 10px;
-    background-color: var(--red-100);
+    background-color: var(--red-50);
 }
 
 
@@ -16,6 +16,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    transition: transform 0.3s ease-out;
+}
+
+#item-one-menu:hover,
+#item-two-menu:hover,
+#item-three-menu:hover {
+    transform: scale(1.05);
 }
 
 #img-one-menu,
@@ -35,6 +42,7 @@
     align-items: center;
     font-family: 'Gabarito', sans-serif;
     font-size: 25px;
+    color: var(--dark-charcoal);
 }
 
 @media (max-width: 1024px) {
@@ -57,5 +65,5 @@
         min-height: 30%;
         max-width: 100%;
         width: auto;
-}
+    }
 }
