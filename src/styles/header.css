@@ -23,12 +23,11 @@ header {
 
 header > h3 {
     box-sizing: border-box;
-    font-family: var(--logo-font);
+    font-family: var(--medieval-font);
     font-size: 2rem;
     white-space: nowrap;
     margin: 0;
     padding: 0;
-
 }
 
 header > img {
@@ -37,7 +36,7 @@ header > img {
 }
 
 ul {
-    font-family: var(--page-font);
+    font-family: var(--regular-font);
     display: flex;
     margin: 0;
     padding: 0;

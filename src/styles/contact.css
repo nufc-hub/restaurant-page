@@ -15,7 +15,7 @@
 }
 
 #form-contact {
-    font-family: var(--page-font);
+    font-family: var(--regular-font);
     color: var(--dark-charcoal);
     display: inherit;
     flex-direction: column;
@@ -113,7 +113,7 @@
     display: flex;
     flex: 1;
     justify-content: space-around;
-    font-family: var(--page-font);
+    font-family: var(--regular-font);
     color: var(--dark-charcoal);
     background-color: var(--rose-100);
 }
@@ -144,7 +144,7 @@
     #label-booking-date,
     #label-booking-time,
     #label-guests {
-        font-family: var(--page-font);
+        font-family: var(--regular-font);
         margin-bottom: 2px;
     }
 

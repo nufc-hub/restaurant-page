@@ -14,7 +14,7 @@
 }
 
 #slogan-home {
-    font-family: 'Gabarito', sans-serif;
+    font-family: var(--medieval-font);
     font-size: 42px;
     color: var(--dark-charcoal);
     margin-left: 10px;

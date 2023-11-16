@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Gabarito', sans-serif;
+    font-family: var(--medieval-font);
     font-size: 25px;
     color: var(--dark-charcoal);
 }
